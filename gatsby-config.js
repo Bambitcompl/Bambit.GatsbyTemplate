@@ -44,6 +44,18 @@ module.exports = {
         sitemap: `${siteUrl}/sitemap.xml`,
         policy: [{ userAgent: '*', allow: '/', disallow: '/404' }]
       }
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Lato`,
+            variants: [`400`, `700`],
+            subsets: [`latin`]
+          },
+        ],
+      },
     }
   ],
 }
