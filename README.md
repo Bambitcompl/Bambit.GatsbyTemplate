@@ -16,5 +16,9 @@ Create `robots.txt` for your Gatsby site.
 * [Transformer Sharp](https://www.gatsbyjs.org/packages/gatsby-transformer-sharp/) - 
 Creates ImageSharp nodes from image types that are supported by the Sharp image processing library and provides fields in their GraphQL types for processing your images in a variety of ways including resizing, cropping, and creating responsive images.
 
+* [SASS](https://www.gatsbyjs.org/packages/gatsby-plugin-sass/) - 
+Provides drop-in support for SASS/SCSS stylesheets
+
 ### Continuous Integration
 * Travis CI - Build project (.travis.yml file)
+
