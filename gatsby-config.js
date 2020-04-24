@@ -1,8 +1,11 @@
+const siteUrl = `https://www.example.com`;
+
 module.exports = {
   siteMetadata: {
     title: `Bambit Gatsby Template`,
     description: `Opis.`,
     author: `Bambit.com.pl`,
+    siteUrl: siteUrl,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -28,8 +31,19 @@ module.exports = {
         display: `minimal-ui`,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        exclude: [`/category/*`, `/path/to/page`],
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: siteUrl,
+        sitemap: `${siteUrl}/sitemap.xml`,
+        policy: [{ userAgent: '*', allow: '/', disallow: '/404' }]
+      }
+    }
   ],
 }
