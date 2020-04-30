@@ -5,10 +5,10 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React from "react"
+import React from 'react';
 
 const Layout = ({ children }) => (
   <>{children}</>
-)
+);
 
-export default Layout
+export default Layout;

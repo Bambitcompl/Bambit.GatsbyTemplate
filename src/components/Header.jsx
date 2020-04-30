@@ -1,10 +1,10 @@
-import React from "react"
+import React from 'react';
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <header>
-    
+
   </header>
-)
+);
 
 
-export default Header
+export default Header;

@@ -1,40 +1,40 @@
-const siteUrl = `https://www.example.com`;
+const siteUrl = 'https://www.example.com';
 
 module.exports = {
   siteMetadata: {
-    title: `Bambit Gatsby Template`,
-    description: `Opis.`,
-    author: `Bambit.com.pl`,
+    title: 'Bambit Gatsby Template',
+    description: 'Opis.',
+    author: 'Bambit.com.pl',
     siteUrl: siteUrl,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `images`,
+        name: 'images',
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-plugin-sass`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    'gatsby-plugin-sass',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        name: `gatsby-starter-react-bootstrap`,
-        short_name: `react-bootstrap`,
+        name: 'gatsby-starter-react-bootstrap',
+        short_name: 'react-bootstrap',
         icon: 'src/images/gatsby-icon.png',
-        start_url: `/`,
-        background_color: `#20232a`,
-        theme_color: `#20232a`,
-        display: `minimal-ui`,
+        start_url: '/',
+        background_color: '#20232a',
+        theme_color: '#20232a',
+        display: 'minimal-ui',
       },
     },
     {
       resolve: 'gatsby-plugin-sitemap',
       options: {
-        exclude: [`/category/*`, `/path/to/page`],
+        exclude: ['/category/*', '/path/to/page'],
       }
     },
     {
@@ -46,16 +46,16 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: 'gatsby-plugin-prefetch-google-fonts',
       options: {
         fonts: [
           {
-            family: `Lato`,
-            variants: [`400`, `700`],
-            subsets: [`latin`]
+            family: 'Lato',
+            variants: ['400', '700'],
+            subsets: ['latin']
           },
         ],
       },
     }
   ],
-}
+};
