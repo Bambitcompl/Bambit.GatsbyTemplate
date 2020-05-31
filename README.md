@@ -21,4 +21,4 @@ Provides drop-in support for SASS/SCSS stylesheets
 
 ### Continuous Integration
 * Travis CI - Build project (.travis.yml file)
-* Github Actions - Build gatsby project and publish to FTP (/.github/workflows/main.yml)
+* Github Actions - Build gatsby project and publish to FTP ([main.yml](https://github.com/Bambitcompl/Bambit.GatsbyTemplate/blob/master/.github/workflows/main.yml))
