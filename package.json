@@ -33,7 +33,7 @@
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-react": "^7.19.0",
     "gh-pages": "^2.0.1",
-    "prettier": "^1.17.0"
+    "prettier": "^2.0.5"
   },
   "keywords": [
     "gatsby"
