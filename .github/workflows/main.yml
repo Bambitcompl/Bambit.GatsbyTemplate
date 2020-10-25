@@ -20,4 +20,4 @@ jobs:
     #     ftp-server: ftp://_ftpserver_
     #     ftp-username: _ftpuser_
     #     ftp-password: ${{ secrets.FTP_PASSWORD }}
-    #     local-dir: src
+    #     local-dir: public
