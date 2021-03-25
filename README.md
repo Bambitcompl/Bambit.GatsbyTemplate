@@ -21,3 +21,4 @@ Provides drop-in support for SASS/SCSS stylesheets
 
 ### Continuous Integration
 * Github Actions - Build gatsby project and publish to FTP ([build-and-deploy.yml](https://github.com/Bambitcompl/Bambit.NiceGuys/blob/ci-cd/.github/workflows/build-and-deploy.yml))
+* Build branch on pull requests, before merging
