@@ -1,4 +1,4 @@
-# 👨‍🚀 Bambit.GatsbyTemplate [![Build Status](https://travis-ci.com/Bambitcompl/Bambit.GatsbyTemplate.svg?branch=master)](https://travis-ci.com/Bambitcompl/Bambit.GatsbyTemplate)
+# 👨‍🚀 Bambit.GatsbyTemplate [![Build and Deploy](https://github.com/Bambitcompl/Bambit.GatsbyTemplate/actions/workflows/build-and-deploy.yml/badge.svg)](https://github.com/Bambitcompl/Bambit.GatsbyTemplate/actions/workflows/build-and-deploy.yml)
 
 desc
 
@@ -20,5 +20,5 @@ Creates ImageSharp nodes from image types that are supported by the Sharp image 
 Provides drop-in support for SASS/SCSS stylesheets
 
 ### Continuous Integration
-* Travis CI - Build project (.travis.yml file)
-* Github Actions - Build gatsby project and publish to FTP ([main.yml](https://github.com/Bambitcompl/Bambit.GatsbyTemplate/blob/master/.github/workflows/main.yml))
+* Github Actions - Build gatsby project and publish to FTP ([build-and-deploy.yml](https://github.com/Bambitcompl/Bambit.NiceGuys/blob/ci-cd/.github/workflows/build-and-deploy.yml))
+* Build branch on pull requests, before merging
