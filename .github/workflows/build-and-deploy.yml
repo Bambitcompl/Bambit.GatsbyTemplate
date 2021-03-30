@@ -18,11 +18,11 @@ jobs:
           yarn add gatsby-cli
           yarn install
           yarn build
-          
-    # - name: FTP-Deploy-Action
-    #   uses: SamKirkland/FTP-Deploy-Action@3.1.1
-    #   with:
-    #     ftp-server: ftp://_ftpserver_
-    #     ftp-username: ${{ secrets.FTP_USER }}
-    #     ftp-password: ${{ secrets.FTP_PASSWORD }}
-    #     local-dir: public
+              
+#       - name: FTP Deploy 🚀
+#         uses: SamKirkland/FTP-Deploy-Action@4.0.0
+#         with:
+#           server: _ftpserver_
+#           username: ${{ secrets.FTP_USER }}
+#           password: ${{ secrets.FTP_PASSWORD }}
+#           local-dir: ./public/
