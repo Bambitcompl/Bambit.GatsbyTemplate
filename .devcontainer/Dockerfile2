@@ -1,0 +1,47 @@
+#Starting image named as builder
+FROM node:12.18.1-alpine3.12 as builder
+
+#Node hack for errors
+ENV NODE_OPTIONS=--max-old-space-size=8192
+
+#Copy files with packages info
+COPY package.json yarn.lock ./
+
+#Install without rebuilding lockfile and copy packages to new folder
+RUN yarn install --frozen-lockfile && mkdir /ng-app && mv ./node_modules ./ng-app
+
+#Change workdir to our new folder
+WORKDIR /ng-app
+
+#Copy all source files to out new folder
+COPY . .
+
+#Run project production build and set output to dist folder
+RUN yarn run ng build --configuration=production --output-path=dist
+
+#Deploy starting image with webserver
+FROM nginx:1.19-alpine
+
+#Set DataDog Variables
+ENV DD_VERSION=v2.6.1
+
+#Remove default website files
+RUN rm -rf /usr/share/nginx/html/*
+
+#Copy our built application from builder image to webserver directory
+COPY --from=builder /ng-app/dist /usr/share/nginx/html
+
+#Copy our NGINX configuration and replace default one
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+#Copy entrypoint and configuration scripts
+COPY docker-entrypoint.sh generate_config.sh ./
+
+#Grant executable for entrypoint and configuration scripts
+RUN chmod +x docker-entrypoint.sh generate_config.sh
+
+#Expose container 80 port
+EXPOSE 80
+
+#Start container by running our entrypoint script
+ENTRYPOINT ["./docker-entrypoint.sh"]
