@@ -1,0 +1,26 @@
+{
+  "name": "NiceGuys",
+  "dockerFile": "Dockerfile",
+  "settings": {
+    "editor.formatOnSave": true
+  },
+  "appPort": [4200],
+  "extensions": [
+    "xabikos.reactsnippets",
+    "formulahendry.auto-close-tag",
+    "formulahendry.auto-rename-tag",
+    "coenraads.bracket-pair-colorizer",
+    "vincaslt.highlight-matching-tag",
+    "streetsidesoftware.code-spell-checker",
+    "streetsidesoftware.code-spell-checker-polish",
+    "pranaygp.vscode-css-peek",
+    "ms-azuretools.vscode-docker",
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "ms-vscode.vscode-typescript-next",
+    "visualstudioexptteam.vscodeintellicode",
+    "esbenp.prettier-vscode",
+    "zignd.html-css-class-completion",
+    "mhutchie.git-graph"
+  ]
+}
