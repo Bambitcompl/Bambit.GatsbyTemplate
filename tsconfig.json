@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "lib": ["dom", "es2015", "es2017", "es2018", "es2019"],
+    "module": "commonjs",
+    "noEmit": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "baseUrl": "./",
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "esnext",
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true
+  },
+  "types": ["node"],
+  "include": ["**/*.ts", "**/*.tsx", "gatsby-node.js", "gatsby-config.js"],
+  "exclude": ["node_modules", ".cache", "public"]
+}

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
 
 import Layout from '../components/Layout';
 import SEO from '../components/Seo';
@@ -7,9 +6,9 @@ import SEO from '../components/Seo';
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={['gatsby', 'react', 'bootstrap']} />
-    <Container>
+    <div>
       Starter
-    </Container>
+    </div>
   </Layout>
 );
 

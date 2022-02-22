@@ -7,8 +7,6 @@
 
 import React from 'react';
 
-const Layout = ({ children }) => (
-  <>{children}</>
-);
+const Layout: React.FC = ({ children }) => <>{children}</>;
 
 export default Layout;
