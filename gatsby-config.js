@@ -1,4 +1,5 @@
 const siteUrl = 'https://www.example.com';
+const path = require('path');
 
 module.exports = {
   siteMetadata: {
@@ -8,6 +9,10 @@ module.exports = {
     siteUrl: siteUrl,
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-root-import',
+      options: { '@': path.join(__dirname, 'src'), '~': path.join(__dirname, 'public') },
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',
