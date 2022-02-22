@@ -39,6 +39,7 @@ function Seo({ description, lang, meta, keywords, title }: SEOProps) {
   );
 
   const metaDescription = description || site.siteMetadata.description;
+  const combinedKeywords = keywords?.join(',  ');
 
   return (
     <Helmet
@@ -59,6 +60,7 @@ function Seo({ description, lang, meta, keywords, title }: SEOProps) {
       {meta?.map(tag => (
         <meta name={tag.name} property={tag.property} content={tag.content} />
       ))}
+      <meta name="keywords" content={combinedKeywords} />
     </Helmet>
   );
 }
